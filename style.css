@@ -1,0 +1,115 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.login {
+ height: 100vh;   
+ background: linear-gradient(120deg, #55f7a6, #45c4ca);
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.login_container {
+    min-height: 400px;
+    width: 300px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    padding: 32px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+.login_title {
+    margin-bottom: 32px;
+    color: #303030;
+}
+
+.login_form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.login_input {
+  height: 48px;
+  width: 100%;
+  box-sizing: border-box;  
+  padding-left: 8px;
+  border: unset;
+  outline: none;
+}
+
+.login_input-border {
+   height: 1px; 
+   width: 100%;
+   margin-bottom: 16px;
+   background-color: #cfcfcf;
+}
+
+
+.login_input-border::after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 0;
+    margin-bottom: 16px;
+    background: linear-gradient(120deg,#55f7a6, #45c4ca);
+    transition: .3s ease-in-out;
+}
+
+
+.login_input:focus + .login_input-border::after {
+    width:100%;
+}
+
+
+.login_input-border.error {
+    background:rgb(247, 27, 27);
+}
+
+.login_input-border.error::after {
+    background:rgba(243, 26, 26, 0.911);
+}
+
+.login_submit  {
+    height: 48px;
+    width: 100%;
+    outline: none;
+    background: linear-gradient(120deg,#55f7a6, #45c4ca);
+    background-size: 200%;
+    margin-bottom: 32px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    
+    border: unset;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+.login_submit:disabled {
+    background:rgba(223, 6, 6, 0.842);
+    cursor: not-allowed;
+}
+
+.login_submit:hover {
+  background-position: right;  
+}
+
+.login_submit.error {
+    background-color: #b0b0b1;
+}
+
+.login_reset {
+    font-size: 12px;
+    color: #929292;
+    text-decoration: none;
+}
